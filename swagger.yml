@@ -1,0 +1,50 @@
+swagger: "2.0"
+info:
+  description: This is a RESTful API for querying a Chado database
+  version: "1.0.0"
+  title: Chado Database API
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /genes:
+    get:
+      operationId: "genes.read"
+      tags:
+        - "Genes"
+      summary: "Get all genes"
+      description: "Read the list of genes"
+      responses:
+        200:
+          description: "Successful read genes list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                name:
+                  type: "string"
+                timestamp:
+                  type: "string"
+  /polypeptides:
+    get:
+      operationId: "polypeptides.read"
+      tags:
+        - "Polypeptides"
+      summary: "Get all polypeptides"
+      description: "Read the list of polypeptides"
+      responses:
+        200:
+          description: "Successful read polypeptides list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                name:
+                  type: "string"
+                timestamp:
+                  type: "string"

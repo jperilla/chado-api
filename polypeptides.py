@@ -7,7 +7,7 @@ def get_timestamp():
 
 
 def get_polypeptides():
-    # TODO: move connection to read
+    # TODO: move connection to it's own file
     conn = mysql.connector.connect(user='looker', password='mickey',
                                    host='35.232.96.67', database='chado_genes')
     curs = conn.cursor()

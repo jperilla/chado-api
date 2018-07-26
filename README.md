@@ -1,2 +1,2 @@
-# chado-graphql
-A graphql implementation for a Chado database, with python, flask, graphene.
+# chado-api
+A python API for querying a database with the Chado schema.

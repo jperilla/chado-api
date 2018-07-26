@@ -23,7 +23,7 @@ def get_polypeptides():
         "'gene_product_name';")
     curs.execute(query)
 
-    # Create products by iterating through query result
+    # Create products by iterating through query result - replace this with ORM
     polypeptides = dict()
     for (uniquename, value) in curs:
         polypeptides[value.decode('utf-8')] = {"uniquename":
